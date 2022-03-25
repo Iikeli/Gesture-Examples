@@ -11,13 +11,22 @@ struct ScalingCircle: View {
 
     @State private var circleSize: CGFloat = 150
     @GestureState var dragging: DragState = .inactive
+    @State private var tapped: Bool = false
+
+    func tappedCircle() {
+        self.tapped = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            // Put your code which should be executed with a delay here
+            self.tapped = false
+        }
+    }
 
     var body: some View {
 
         let scalingDrag = LongPressGesture(minimumDuration: 0.1)
             .sequenced(before: DragGesture())
             .updating($dragging) { value, state, transaction in
-                print(value)
+                guard tapped else { return }
                 switch value {
                     // Long press begins.
                 case .first(true):
@@ -36,6 +45,12 @@ struct ScalingCircle: View {
                 }
             }
 
+        let tapAndScale = TapGesture()
+            .onEnded { value in
+                print("HEY")
+                tappedCircle()
+            }
+
         let magnification = MagnificationGesture()
             .onChanged { value in
                 circleSize += value
@@ -48,6 +63,7 @@ struct ScalingCircle: View {
             Text("Tap & Drag")
                 .font(.title)
         }
+        .gesture(tapAndScale)
         .gesture(scalingDrag)
         .gesture(magnification)
     }
