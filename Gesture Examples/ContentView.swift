@@ -16,7 +16,11 @@ struct ContentView: View {
                 }
             DraggableCircle()
                 .tabItem {
-                    Label("Drag", systemImage: "trash")
+                    Label("Drag", systemImage: "arrow.up.and.down.and.arrow.left.and.right")
+                }
+            ScalingCircle()
+                .tabItem {
+                    Label("Scale", systemImage: "arrow.up.and.down")
                 }
         }
     }

@@ -64,7 +64,7 @@ struct DraggableCircle: View {
         return
         ZStack {
             Circle()
-                .fill(Color.blue)
+                .foregroundColor(.mint)
                 .overlay(dragState.isDragging ? Circle().stroke(Color.white, lineWidth: 2) : nil)
                 .frame(width: 150, height: 150, alignment: .center)
                 .animation(nil)

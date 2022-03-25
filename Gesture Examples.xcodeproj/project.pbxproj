@@ -13,6 +13,7 @@
 		344B59DC27EDAA3F00F39F1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344B59DB27EDAA3F00F39F1C /* Preview Assets.xcassets */; };
 		344B59E327EDBB9F00F39F1C /* DraggableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59E227EDBB9F00F39F1C /* DraggableCircle.swift */; };
 		344B59E527EDC2B400F39F1C /* BasicGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59E427EDC2B400F39F1C /* BasicGestures.swift */; };
+		344B59E827EDDD4900F39F1C /* ScalingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59E727EDDD4900F39F1C /* ScalingCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		344B59DB27EDAA3F00F39F1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		344B59E227EDBB9F00F39F1C /* DraggableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableCircle.swift; sourceTree = "<group>"; };
 		344B59E427EDC2B400F39F1C /* BasicGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGestures.swift; sourceTree = "<group>"; };
+		344B59E727EDDD4900F39F1C /* ScalingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalingCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				344B59E427EDC2B400F39F1C /* BasicGestures.swift */,
 				344B59E227EDBB9F00F39F1C /* DraggableCircle.swift */,
+				344B59E727EDDD4900F39F1C /* ScalingCircle.swift */,
 			);
 			path = GestureViews;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				344B59D727EDAA3C00F39F1C /* ContentView.swift in Sources */,
 				344B59E527EDC2B400F39F1C /* BasicGestures.swift in Sources */,
 				344B59D527EDAA3C00F39F1C /* Gesture_ExamplesApp.swift in Sources */,
+				344B59E827EDDD4900F39F1C /* ScalingCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
