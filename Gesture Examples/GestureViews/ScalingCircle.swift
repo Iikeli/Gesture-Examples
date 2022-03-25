@@ -17,6 +17,7 @@ struct ScalingCircle: View {
         let scalingDrag = LongPressGesture(minimumDuration: 0.1)
             .sequenced(before: DragGesture())
             .updating($dragging) { value, state, transaction in
+                print(value)
                 switch value {
                     // Long press begins.
                 case .first(true):
@@ -34,6 +35,11 @@ struct ScalingCircle: View {
                     state = .inactive
                 }
             }
+
+        let magnification = MagnificationGesture()
+            .onChanged { value in
+                circleSize += value
+            }
         
         ZStack {
             Circle()
@@ -41,7 +47,9 @@ struct ScalingCircle: View {
                 .foregroundColor(.mint)
             Text("Tap & Drag")
                 .font(.title)
-        }.gesture(scalingDrag)
+        }
+        .gesture(scalingDrag)
+        .gesture(magnification)
     }
 }
 
