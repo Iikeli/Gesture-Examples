@@ -14,6 +14,7 @@
 		344B59E327EDBB9F00F39F1C /* DraggableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59E227EDBB9F00F39F1C /* DraggableCircle.swift */; };
 		344B59E527EDC2B400F39F1C /* BasicGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59E427EDC2B400F39F1C /* BasicGestures.swift */; };
 		344B59E827EDDD4900F39F1C /* ScalingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59E727EDDD4900F39F1C /* ScalingCircle.swift */; };
+		344B59EB27EDE53000F39F1C /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B59EA27EDE53000F39F1C /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		344B59E227EDBB9F00F39F1C /* DraggableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableCircle.swift; sourceTree = "<group>"; };
 		344B59E427EDC2B400F39F1C /* BasicGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGestures.swift; sourceTree = "<group>"; };
 		344B59E727EDDD4900F39F1C /* ScalingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalingCircle.swift; sourceTree = "<group>"; };
+		344B59EA27EDE53000F39F1C /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		344B59D327EDAA3C00F39F1C /* Gesture Examples */ = {
 			isa = PBXGroup;
 			children = (
+				344B59E927EDE51D00F39F1C /* Helpers */,
 				344B59E627EDDB8E00F39F1C /* GestureViews */,
 				344B59D427EDAA3C00F39F1C /* Gesture_ExamplesApp.swift */,
 				344B59D627EDAA3C00F39F1C /* ContentView.swift */,
@@ -82,6 +85,14 @@
 				344B59E727EDDD4900F39F1C /* ScalingCircle.swift */,
 			);
 			path = GestureViews;
+			sourceTree = "<group>";
+		};
+		344B59E927EDE51D00F39F1C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				344B59EA27EDE53000F39F1C /* DragState.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				344B59E327EDBB9F00F39F1C /* DraggableCircle.swift in Sources */,
+				344B59EB27EDE53000F39F1C /* DragState.swift in Sources */,
 				344B59D727EDAA3C00F39F1C /* ContentView.swift in Sources */,
 				344B59E527EDC2B400F39F1C /* BasicGestures.swift in Sources */,
 				344B59D527EDAA3C00F39F1C /* Gesture_ExamplesApp.swift in Sources */,
