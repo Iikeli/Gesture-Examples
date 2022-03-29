@@ -22,6 +22,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Scale", systemImage: "arrow.up.and.down")
                 }
+            UIKitGestureView()
+                .tabItem {
+                    Label("UIKit", systemImage: "archivebox")
+                }
         }
     }
 }

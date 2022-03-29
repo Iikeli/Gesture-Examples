@@ -3,7 +3,6 @@ import SwiftUI
 struct DraggableCircle: View {
 
     @GestureState var dragState = DragState.inactive
-    @State private var isDraggable: Bool = false
     @State private var viewState = CGSize.zero
 
     var body: some View {
@@ -16,33 +15,25 @@ struct DraggableCircle: View {
                     // Long press begins.
                 case .first(true):
                     state = .pressing
-                    isDraggable = true
                     // Long press confirmed, dragging may begin.
                 case .second(true, let drag):
                     state = .dragging(translation: drag?.translation ?? .zero)
                     // Dragging ended or the long press cancelled.
                 default:
                     state = .inactive
-                    isDraggable = false
                 }
-//                if state != .pressing || state != .dragging {
-//                    isDraggable = false
-//                }
             }
             .onEnded { value in
                 guard case .second(true, let drag?) = value else { return }
                 self.viewState.width += drag.translation.width
                 self.viewState.height += drag.translation.height
-                isDraggable = false
             }
 
         return ZStack {
             Circle()
                 .foregroundColor(.mint)
-                .animation(.interpolatingSpring(mass: 10, stiffness: 100, damping: 10, initialVelocity: 100), value: dragState.isActive)
-                .frame(width: isDraggable ? 165 : 150, height: isDraggable ? 165 : 150, alignment: .center)
-                .shadow(radius: dragState.isActive ? 8 : 0)
-                .animation(.linear(duration: minimumLongPressDuration), value: dragState.isActive)
+                .animation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.5), value: dragState.isActive)
+                .frame(width: dragState.isActive ? 165 : 150, height: dragState.isActive ? 165 : 150, alignment: .center)
             Text("Drag me")
                 .font(.title)
         }
